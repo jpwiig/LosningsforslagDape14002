@@ -5,19 +5,25 @@ import javax.swing.*;
 public class main {
     public static void main(String[] args) {
         //task 1
-        int age = Integer.parseInt(JOptionPane.showInputDialog("write my age"));
-        JOptionPane.showMessageDialog(null, "My  age is: " + age);
-
+        try{
+            int age = Integer.parseInt(JOptionPane.showInputDialog("write my age"));
+            JOptionPane.showMessageDialog(null, "My  age is: " + age);
+        }catch (Exception e){
+            System.out.println("Error in task 1 " + e);
+        }
         //task 2 & 3
-        double val1, val2, val3, sum, avg;
-        val1 = Double.parseDouble(JOptionPane.showInputDialog("write the first decimal: "));
-        val2 = Double.parseDouble(JOptionPane.showInputDialog("write the second decimal: "));
-        val3 = Double.parseDouble(JOptionPane.showInputDialog("write the third decimal: "));
-        sum =  val1 + val2 + val3;
-        avg = sum / 3;
-        System.out.println("The sum is: " + sum);
-        System.out.println("average: " + avg);
-
+        try {
+            double val1, val2, val3, sum, avg;
+            val1 = Double.parseDouble(JOptionPane.showInputDialog("write the first decimal: "));
+            val2 = Double.parseDouble(JOptionPane.showInputDialog("write the second decimal: "));
+            val3 = Double.parseDouble(JOptionPane.showInputDialog("write the third decimal: "));
+            sum = val1 + val2 + val3;
+            avg = sum / 3;
+            System.out.println("The sum is: " + sum);
+            System.out.println("average: " + avg);
+        }catch (Exception e){
+            System.out.println("error in task 2 & 3 " + e);
+        }
         //task 4
 
         double val4, val5, val6, sum1, avg1;
