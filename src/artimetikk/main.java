@@ -67,7 +67,7 @@ public class main {
         try {
             int noOfpersons = Integer.parseInt(JOptionPane.showInputDialog("Number of Persons"));
             int noOfpizzas = Integer.parseInt(JOptionPane.showInputDialog("Number of pizzas"));
-            int slicesPerPerson = noOfpizzas / noOfpersons;
+            int slicesPerPerson = (noOfpizzas * 8) / noOfpersons;
             int noOfslicesLeft = noOfpizzas % noOfpersons;
 
             System.out.println("Pizzas: " + noOfpizzas + "Persons: " + noOfpersons + "slices per person: " + slicesPerPerson + "Slices left: " + noOfslicesLeft);
@@ -94,12 +94,12 @@ public class main {
             int age = Integer.parseInt(JOptionPane.showInputDialog("whats your age"));
 
             //Too old
-            if (age <= 18) JOptionPane.showMessageDialog(null, "you are old enough");
+            if (age >= 18) JOptionPane.showMessageDialog(null, "you are old enough");
 
             //Too young
-            if (age > 18) JOptionPane.showMessageDialog(null, "you are too young");
+            if (age < 18) JOptionPane.showMessageDialog(null, "you are too young");
 
-            if (age >= 18 && age <= 16) JOptionPane.showMessageDialog(null, "You can pratice driving");
+            if (age >= 18 && age >= 16) JOptionPane.showMessageDialog(null, "You can pratice driving");
         }catch (Exception e){
             System.out.println("Error in task 10");
         }
